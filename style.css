@@ -5,10 +5,31 @@
 
 * {
     box-sizing: border-box;
+    margin: 0;
+}
+
+@keyframes slide {
+	0% { transform: translateX(0); }
+	10% { transform: translateX(0); }
+
+	15% { transform: translateX(-100%); }
+	30% { transform: translateX(-100%); }
+
+	35% { transform: translateX(-200%); }
+	50% { transform: translateX(-200%); }
+
+	55% { transform: translateX(-300%); }
+	70% { transform: translateX(-300%); }
+
+	75% { transform: translateX(-400%); }
+	90% { transform: translateX(-400%); }
+
+	95% { transform: translateX(-500%); }
+	100% { transform: translateX(-500%); }
 }
 
 .nav {
-    width: 5rem;
+    width: 4.5rem;
     height: 95%;
     position: fixed;
     background-color: rgba(60, 60, 60, 0.3);
@@ -18,6 +39,15 @@
     align-items: center;
     justify-content: space-evenly;
     border-radius: 20px;
+    margin: 8px;
+    top: 10px;
+}
+
+.nav:hover {
+    width: 7vw;
+	animation-name: slide;
+    z-index: 2000;
+    transition-duration: 0.5s;
 }
 
 .nav_icon {
@@ -37,6 +67,8 @@
 
 .nav_icon a:hover {
     color: #ffdd56;
+    font-size: 40px;
+    transition-duration: 0.2s;
 }
 
 /* WRAPPER  */
@@ -61,19 +93,20 @@ body::-webkit-scrollbar-track {
     display: grid;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    width: 100%;
+    height: 100vh;
 }
 
 .circulo img {
-    width: 600px;
+    width: 660px;
     align-self: center;
     justify-self: center;
+    margin-top: 0;
 }
 
 .circulo {
     align-self: center;
     justify-self: center;
-    margin: 0 auto;
+    margin-top: 0;
     z-index: 100;
 }
 
@@ -86,7 +119,7 @@ body::-webkit-scrollbar-track {
 }
 
 .derecha h1 {
-    line-height: 0.2;
+    line-height: 0.8;
     font-size: 5em;
     font-family: 'Special Elite', cursive;
     text-align: right;
@@ -105,43 +138,46 @@ body::-webkit-scrollbar-track {
 
 .about_me_wrapper {
     background-color: #171717;
+    height: 100vh;
 }
 
 .about_me {
     font-size: 2em;
     font-family: 'Special Elite', cursive;
     color: #ffdd56;
-    margin: 2em 0 2em 5em;
     padding: 50px;
+    margin-left: 4em;
 }
 
 
 /*  MY WORK  */
 
 .my_work {
-    margin-left: 8em;
     display: grid;
     grid-template-columns: 2fr 1fr;
-
+    background: url(circulo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80vh;
+    padding: 100px;
+    height: 100vh;
 }
 
 .my_works_title {
-    background: #ffdd56;
-    margin-right: 5em;
-}
-
-.my_work h2 {
-    font-size: 3em;
+    font-size: 2.5em;
     font-family: 'Special Elite', cursive;
     color: #171717;
     text-align: right;
-    background: #ffffff;
+    float: right;
 }
 
+
 .works {
+    margin-left: 5em;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 40px;
+    z-index: 1000;
 }
 
 .works_item {
@@ -150,19 +186,30 @@ body::-webkit-scrollbar-track {
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
     border-radius: 15px;
     padding: 10px;
-    place-content: center;
+    text-align: center;
+    background: #ffffff;
+    height: 235px;
+    align-self: center;
 }
 
 .works_item h4 {
-
+    line-height: 1;
+    margin: 15px auto;
+    text-align: left;
 }
 
 .works_item p {
-
+    line-height: 1;
+    margin: 10px auto;
+    text-align: left;
 }
 
 .works_item img {
     width: 150px;
+    height: 80px;
+    justify-self: center;
+    border-radius: 10px;
+    margin: auto;
 }
 
 .works_item:hover {
@@ -179,9 +226,38 @@ body::-webkit-scrollbar-track {
     align-content: center;
     text-decoration: none;
     font-size: 12px;
+    text-align: center;
+    font-weight: 1000;
+    margin: 10px auto 0 auto;
+}
+
+.works_item a:hover {
+    color: #ffdd56;
 }
 
 .links {
-
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
 }
 
+/* CONTACT INFO ------------------------*/
+
+footer {
+    margin: 0;
+    background-color: #171717;
+}
+
+.contact_info {
+    color: #ffffff;
+    padding: 30px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
+
+.contact_info a {
+    color: #ffffff;
+    margin: 0 10px;
+    font-size: 30px;
+}
