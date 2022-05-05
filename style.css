@@ -94,7 +94,6 @@ body::-webkit-scrollbar-track {
 
 .home {
     display: grid;
-    display: grid;
     grid-template-columns: 2fr 1fr;
     height: 100vh;
 }
@@ -282,3 +281,207 @@ footer {
     transition-duration: 0.2s;
 }
 
+
+
+@media screen and (max-width: 600px) {
+
+    body {
+        width: 100%;
+
+    }
+    
+    .nav {
+        width: 90%;
+        height: 8%;
+        position: fixed;
+        background-color: rgba(60, 60, 60, 0.3);
+        display: flex;
+        border-radius: 20px;
+        z-index: 10000;
+        margin: auto;
+        padding: 0;
+    }
+
+    .nav_icon {
+        margin: auto;
+        padding: 0;
+    }
+
+    .nav_wrapper {
+        margin: auto;
+        justify-items: center;
+    }
+
+
+
+    .nav_icon a {
+        font-size: 25px;
+        justify-self: center;
+        align-self: center;
+        padding: 0;
+    }
+
+    .nav:hover {
+        display: none;
+    }
+
+    .nav a:hover {
+        display: none;
+    }
+
+/*HOME*/
+
+    .wrapper {
+        margin: 0;
+    }
+
+    .home {
+        display: grid;
+        grid-template-columns: 1fr;
+    
+    }
+    
+    .circulo img {
+        width: 350px;
+        align-self: center;
+        justify-self: center;
+        margin-top: 0;
+    }
+
+    .derecha {
+        float: right;
+        margin-right: 35px;
+    }
+    
+    .derecha h1 {
+        line-height: 0.8;
+        font-size: 25px;
+        font-family: 'Special Elite', cursive;
+        text-align: right;
+        color: #171717;
+    }
+    
+    .derecha p {
+        text-align: right;
+        font-family: 'Poppins', sans-serif;
+        font-size: 20px;
+        color: #171717;
+    }
+    /*ABOUT ME*/
+    .about_me_wrapper {
+        background-color: #171717;
+       
+    }
+    
+    .about_me {
+        font-size: 2em;
+        font-family: 'Special Elite', cursive;
+        color: #ffdd56;
+        margin: auto;
+    }
+    
+    .about_me p, a {
+        font-family: "Poppins";
+        font-size: 20px;
+        margin-top: 20px;
+    }
+    
+    .about_me a {
+        text-decoration: none;
+        color: #ffdd56;
+        font-weight: 1000;
+    }
+
+
+    /*MY WORK*/
+    .my_work {
+        display: grid;
+        grid-template-columns: 1fr;
+        background: url(circulo.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 300px;
+        justify-content: center;
+    }
+    
+    .my_works_title {
+        font-size: 20px;
+        font-family: 'Special Elite', cursive;
+        color: #171717;
+        margin: 0;
+        display: none;
+    }
+    
+    
+    .works {
+        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+    }
+    
+    .works_item {
+        font-family: 'Poppins', sans-serif;
+        box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+        border-radius: 15px;
+        padding: 10px;
+        text-align: center;
+        background: #ffffff;
+        align-self: center;
+        
+    }
+    
+    .works_item h4 {
+        line-height: 1;
+        margin: 10px auto;
+        text-align: left;
+        font-size: 18px;
+    }
+    
+    .works_item p {
+        line-height: 1;
+        margin: 5px auto;
+        text-align: left;
+        font-size: 15px;
+    }
+    
+    .works_item img {
+        width: 100%;
+        justify-self: center;
+        border-radius: 10px;
+        margin: auto;
+    }
+    
+    .works_item:hover {
+        box-shadow: 0 23px 45px rgba(0,0,0,0.60), 0 18px 14px rgba(0,0,0,0.22);
+    }
+    
+    .works_item a {
+        border: none;
+        background-color: #171717;
+        color: #ffffff;
+        border-radius: 8px;
+        align-self: center;
+        align-content: center;
+        text-decoration: none;
+        font-size: 10px;
+        text-align: center;
+        font-weight: 1000;
+        margin: auto;
+    }
+    
+    .works_item a:hover {
+        color: #ffdd56;
+    }
+    
+    .links {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 50px;
+        grid-gap: 8px;
+        margin: auto;
+        justify-content: space-evenly;
+    }
+
+}
+    
