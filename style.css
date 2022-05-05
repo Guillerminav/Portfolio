@@ -2,7 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Poppins:wght@200&family=Special+Elite&family=Varela+Round&display=swap');
 
 /* NAV  */
-
+html {
+    scroll-behavior: smooth;
+}
 * {
     box-sizing: border-box;
     margin: 0;
@@ -25,7 +27,8 @@
 	90% { transform: translateX(-400%); }
 
 	95% { transform: translateX(-500%); }
-	100% { transform: translateX(-500%); }
+	100% { transform: translateX(-500%);}
+
 }
 
 .nav {
@@ -97,7 +100,7 @@ body::-webkit-scrollbar-track {
 }
 
 .circulo img {
-    width: 660px;
+    width: 620px;
     align-self: center;
     justify-self: center;
     margin-top: 0;
@@ -147,6 +150,18 @@ body::-webkit-scrollbar-track {
     color: #ffdd56;
     padding: 50px;
     margin-left: 4em;
+}
+
+.about_me p, a {
+    font-family: "Poppins";
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.about_me a {
+    text-decoration: none;
+    color: #ffdd56;
+    font-weight: 1000;
 }
 
 
@@ -261,3 +276,9 @@ footer {
     margin: 0 10px;
     font-size: 30px;
 }
+
+.contact_info a:hover {
+    color: #ffdd56;
+    transition-duration: 0.2s;
+}
+
